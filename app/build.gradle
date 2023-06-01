@@ -32,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 kapt {
@@ -56,7 +59,13 @@ dependencies {
 
     // DI
     implementation 'com.google.dagger:hilt-android:2.46.1'
+    implementation 'androidx.annotation:annotation:1.5.0'
     kapt 'com.google.dagger:hilt-compiler:2.46.1'
+
+    //Network
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
 
     // многопоток
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
